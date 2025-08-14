@@ -18,7 +18,7 @@ The core of this research is a novel **hybrid temperature estimation model** des
 
 The ultimate goal is to enable **predictive maintenance** and intelligent **operation management**, preventing failures before they occur by analyzing the motor's thermal state in real-time.
 
-![Model Architecture](figures/FVM-1.png)
+![Model Architecture](Figures/FVM-1.png)
 > *3D Finite Element Model (FEM) used for numerical thermal validation.*
 
 ---
@@ -33,7 +33,7 @@ A deep neural network estimates the core losses and PM eddy current losses, whic
 
 | Core Loss Contour | PM Loss Contour |
 | :-----------------: | :---------------: |
-| ![Core Loss Contour](figures/CorelossContour-1.png) | ![PM Loss Contour](figures/PMlossContour-1.png) |
+| ![Core Loss Contour](Figures/CorelossContour-1.png) | ![PM Loss Contour](Figures/PMlossContour-1.png) |
 > *Distribution of core loss and PM eddy current loss as calculated by the FEA model.*
 
 ### 2. Hybrid Temperature Estimation
@@ -47,7 +47,7 @@ This unit first calculates the motor's casing temperature using a fast and effic
 
 | Winding Temperature | PM Temperature |
 | :-----------------: | :--------------: |
-| ![Winding Temperature Profile](figures/Winding.png) | ![PM Temperature Profile](figures/PM.png) |
+| ![Winding Temperature Profile](Figures/Winding.png) | ![PM Temperature Profile](Figures/PM.png) |
 > *Transient thermal simulation results for the volume average temperature of the winding and PMs, which the hybrid model is trained to replicate.*
 
 ---
@@ -99,12 +99,12 @@ This section provides a brief explanation for each of the key figures included i
 
 | Figure Thumbnail | Description |
 | :---: | :--- |
-| ![Core Loss Contour](figures/CorelossContour-1.png) | **Core Loss Distribution (Fig. 18 in the paper)** <br> This figure shows the distribution of core losses in the stator and rotor at four different time steps during operation. The FEA model calculates these losses by considering the magnetic flux density and saturation in the steel core, providing a crucial heat source input for the thermal simulation. |
-| ![Finite Element Model](figures/FVM-1.png) | **Finite Element Thermal Simulation Results (Fig. 8 in the paper)** <br> This shows the steady-state temperature field distribution across all major components of the motor, as calculated by the 3-D Finite Element Analysis (FEA). It accurately identifies the hotspot location in the end winding section, which reaches a maximum temperature of 62.79°C under nominal conditions. |
-| ![PM Temperature Profile](figures/PM.png) | **Transient Temperature of Permanent Magnets (Fig. 9b in the paper)** <br> This plot shows the simulated volume-average temperature of the Permanent Magnets (PMs) over time during the heating phase. The profile is calculated from the transient numerical model and was found to be in acceptable agreement with the experimental test data. |
-| ![PM Loss Contour](figures/PMlossContour-1.png) | **PM Eddy Current Loss Distribution (Fig. 19 in the paper)** <br> This illustrates the distribution of eddy current losses generated directly within the permanent magnets at four different time steps. While smaller than core losses, these are a direct heat source within the thermally sensitive PMs and are critical for accurate temperature prediction. |
-| ![Temperature vs HTC](figures/TemperatureVSh3-1.png) | **Effect of Heat Transfer Coefficient on Temperature (Fig. 10 in the paper)** <br> This graph demonstrates the effect of the convective Heat Transfer Coefficient (HTC) on the steady-state temperature of the winding, PM, stator, and casing. It shows that increasing the cooling performance (a higher HTC) nonlinearly reduces the motor's temperature, with the effect diminishing significantly after an HTC of 30 W/m²°C. |
-| ![Winding Temperature Profile](figures/Winding.png) | **Transient Temperature of Winding (Fig. 9a in the paper)** <br> This plot shows the simulated volume-average temperature of the winding over time. As the primary source of copper losses, the winding temperature is a critical indicator of the motor's thermal state. The dynamic profile shows a thermal time constant (${\tau_h}$) of 4200 seconds, which closely matches the experimental value. |
+| ![Core Loss Contour](Figures/CorelossContour-1.png) | **Core Loss Distribution (Fig. 18 in the paper)** <br> This figure shows the distribution of core losses in the stator and rotor at four different time steps during operation. The FEA model calculates these losses by considering the magnetic flux density and saturation in the steel core, providing a crucial heat source input for the thermal simulation. |
+| ![Finite Element Model](Figures/FVM-1.png) | **Finite Element Thermal Simulation Results (Fig. 8 in the paper)** <br> This shows the steady-state temperature field distribution across all major components of the motor, as calculated by the 3-D Finite Element Analysis (FEA). It accurately identifies the hotspot location in the end winding section, which reaches a maximum temperature of 62.79°C under nominal conditions. |
+| ![PM Temperature Profile](Figures/PM.png) | **Transient Temperature of Permanent Magnets (Fig. 9b in the paper)** <br> This plot shows the simulated volume-average temperature of the Permanent Magnets (PMs) over time during the heating phase. The profile is calculated from the transient numerical model and was found to be in acceptable agreement with the experimental test data. |
+| ![PM Loss Contour](Figures/PMlossContour-1.png) | **PM Eddy Current Loss Distribution (Fig. 19 in the paper)** <br> This illustrates the distribution of eddy current losses generated directly within the permanent magnets at four different time steps. While smaller than core losses, these are a direct heat source within the thermally sensitive PMs and are critical for accurate temperature prediction. |
+| ![Temperature vs HTC](Figures/TemperatureVSh3-1.png) | **Effect of Heat Transfer Coefficient on Temperature (Fig. 10 in the paper)** <br> This graph demonstrates the effect of the convective Heat Transfer Coefficient (HTC) on the steady-state temperature of the winding, PM, stator, and casing. It shows that increasing the cooling performance (a higher HTC) nonlinearly reduces the motor's temperature, with the effect diminishing significantly after an HTC of 30 W/m²°C. |
+| ![Winding Temperature Profile](Figures/Winding.png) | **Transient Temperature of Winding (Fig. 9a in the paper)** <br> This plot shows the simulated volume-average temperature of the winding over time. As the primary source of copper losses, the winding temperature is a critical indicator of the motor's thermal state. The dynamic profile shows a thermal time constant (${\tau_h}$) of 4200 seconds, which closely matches the experimental value. |
 
 ---
 
