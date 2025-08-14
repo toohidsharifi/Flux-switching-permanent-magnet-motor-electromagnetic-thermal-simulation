@@ -40,9 +40,6 @@ A deep neural network estimates the core losses and PM eddy current losses, whic
 
 The estimated power losses, along with environmental conditions (ambient temperature and Heat Transfer Coefficient - HTC), are fed into the hybrid temperature estimation unit.
 
-![Hybrid Estimation Unit](https://i.imgur.com/uR1uQ4K.png)
-> *The proposed hybrid estimation unit, combining an LPTN and an FNN.*
-
 This unit first calculates the motor's casing temperature using a fast and efficient 2-node LPTN model. This temperature, along with the motor's operating point, is then used by a highly accurate FNN to predict the dynamic temperature profiles of the windings and PMs.
 
 | Winding Temperature | PM Temperature |
@@ -59,9 +56,6 @@ The final model can accurately track the motor's temperature with a peak error b
 ### Predictive Maintenance
 
 The model can predict when a component's temperature will exceed its safety limit, allowing the control system to take preventive action. For instance, under a simulated short-circuit fault, the model predicts that the winding insulation limit of 105°C will be breached in just **970 seconds**.
-
-![Fault Prediction](https://i.imgur.com/83pLhXq.png)
-> *Temperature profiles showing a nominal run (a) vs. a short-circuit fault (b), where the model predicts rapid temperature violation.*
 
 ### Duty Cycle Management
 
